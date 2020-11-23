@@ -1,0 +1,475 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+  
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+ 
+nav,
+footer,
+header,
+aside {
+    display: block;
+} 
+  
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+    
+input,
+button,
+textarea {
+    font-family: inherit;
+} 
+  
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+  
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gilroy'),
+         url("./fonts/Gilroy-Regular.woff2") format("woff2"),
+         url("./fonts/Gilroy-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Gilroy'),
+         url("./fonts/Gilroy-Medium.woff2") format("woff2"),
+         url("./fonts/Gilroy-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Gilroy'),
+         url("./fonts/Gilroy-Semibold.woff2") format("woff2"),
+         url("./fonts/Gilroy-Semibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Gilroy'),
+         url("./fonts/Gilroy-Bold.woff2") format("woff2"),
+         url("./fonts/Gilroy-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Gilroy'),
+         url("./fonts/Gilroy-Black.woff2") format("woff2"),
+         url("./fonts/Gilroy-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat'),
+         url("./fonts/Montserrat-Medium.woff2") format("woff2"),
+         url("./fonts/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat'),
+         url("./fonts/Montserrat-Bold.woff2") format("woff2"),
+         url("./fonts/Montserrat-Bold.woff") format("woff");
+}
+
+:root {
+    --white: #FFFFFF;
+    --button-header: #FF9C9C;
+    --button-header-hover: #FFBFBF;
+    --button-header-hover-shadow: #FFAAAA;
+    --button-header-active: #F97E7E;
+    --button-hover-shadow:#F2C7C9;
+    --text: #32325D;
+    --string-shadow: #EFE5E2;
+}
+
+html, body {
+    min-width: 320px;
+    font-family: 'Gilroy', 'Montserrat', sans-serif;
+}
+
+/* 
+    general
+    header
+    investment
+    problem
+*/
+
+/* general */
+
+.wrap {
+    width: 100%;
+    max-width: 1430px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 700;
+    color: var(--text);
+    /* white-space: nowrap; */
+}
+
+.subtitle {
+    font-family: 'Gilroy';
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.button {
+    background-color: var(--button-header-active);
+    border-radius: 99em;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--white);
+    transition: all 0.2s ease 0s;
+}
+
+.button:hover {
+    background-color: var(--button-header);
+    box-shadow: 0 3px 20px var(--button-hover-shadow);
+}
+
+.button:active {
+    background-color: var(--button-header-active);
+    box-shadow: 0 3px 20px var(--button-hover-shadow);
+}
+
+/* header */
+
+.header {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,1));
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.block-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 730px;
+    padding-left: 20px;
+    background: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 505px;
+    background: none;
+}
+
+.nav-item a {
+    color: var(--text);
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 500;
+    padding: 3px;
+    white-space: nowrap;
+}
+
+.nav-item a:hover {
+    border-bottom: 1px solid var(--button-header);
+    padding-bottom: 8px;
+}
+
+.nav-item a:active {
+    color: var(--button-header)
+}
+
+.button-locale {
+    min-width: 25px;
+    height: 16px;
+    background-image: url(img/world-rus.png);
+    margin: 0 10px;
+}
+
+.button-consult {
+    min-width: 139px;
+    height: 45px;
+    color: var(--white);
+    background-color: var(--button-header);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.2s ease 0s;
+}
+
+.button-consult:hover {
+    background-color: var(--button-header-hover);
+    box-shadow: 0 3px 9px var(--button-header-hover-shadow);
+}
+
+.button-consult:active {
+    background-color: var(--button-header-active);
+    box-shadow: 0 3px 9px var(--button-header-hover-shadow);
+}
+
+/* investment */
+
+.investment {
+    width: 100%;
+    height: 90vh;
+    margin-top: 100px;
+    background: url(img/background.png) left 800px top / 100% 100% no-repeat,
+                url(img/decor-1.png) left -30px bottom 160px / 97px 49px no-repeat,
+                url(img/decor-2.png) center top 40px / 97px 49px no-repeat,
+                url(img/decor-3.png) right -30px bottom 60px / 190px 190px no-repeat;
+}
+
+.investment-subtitle {
+    margin-top: 23px;
+    margin-bottom: 50px;
+}
+
+.investment-button {
+    width: 476px;
+    height: 62px;
+}
+
+.description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.description-title {
+    position: relative;
+}
+
+.description-title::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    width: 20px;
+    height: 40px;
+    background: url(img/half-item.png) no-repeat 0 0;
+}
+
+.picture {
+    width: 90%;
+    min-width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture img {
+    width: 100%;
+    object-fit: contain;
+
+}
+
+.signature-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.signature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+
+}
+
+.signature p {
+    font-family: 'Montserrat';
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 9px;
+}
+
+/* problem */
+
+.problem {
+    width: 100%;
+    height: 100vh;
+    background: url(img/background.png) left -500px top 400px / 100% 100% no-repeat,
+                url(img/scull.png) center center / 512px 512px no-repeat;
+}
+
+.problem-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.problem-title {
+    margin-top: 100px;
+    position: relative;
+}
+
+.problem-title::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    width: 20px;
+    height: 40px;
+    background: url(img/half-item2.png) no-repeat 0 0;
+}
+
+.problem-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 85%;
+    background: url(img/old-face.png) center center / 656px 563px no-repeat;
+}
+
+.string span {
+    box-shadow: 0 12px 40px var(--string-shadow);
+    font-family: 'Gilroy';
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text);
+    padding: 23px 30px;
+    min-width: 200px;
+    border-radius: 99em;
+    background-color: var(--white);
+}
+
+.string {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.string2 {
+    width: 50%;
+}
+
+.string3 {
+    width: 70%;
+}
+
+.string4 {
+    width: 90%;
+}
+
+.string5 {
+    width: 100%;
+}
+
+.string6 {
+    width: 90%;
+}
+
+.string7 {
+    width: 70%;
+}
+
+.string8 {
+    width: 50%;
+}
+
+
+
+@media (max-width: 767px) {
+
+}
