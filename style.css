@@ -171,6 +171,8 @@ html, body {
     header
     investment
     problem
+    action
+    method
 */
 
 /* general */
@@ -320,7 +322,7 @@ html, body {
 }
 
 .description {
-    width: 100%;
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -336,14 +338,15 @@ html, body {
     content: '';
     position: absolute;
     top: 10px;
-    left: -40px;
+    left: -60px;
     width: 20px;
     height: 40px;
     background: url(img/half-item.png) no-repeat 0 0;
 }
 
 .picture {
-    width: 90%;
+    width: 40%;
+    height: 90%;
     min-width: 460px;
     display: flex;
     flex-direction: column;
@@ -360,7 +363,7 @@ html, body {
 .signature-wrap {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 30px;
     width: 100%;
     max-width: 350px;
 }
@@ -405,7 +408,7 @@ html, body {
     content: '';
     position: absolute;
     top: 10px;
-    left: -40px;
+    left: -60px;
     width: 20px;
     height: 40px;
     background: url(img/half-item2.png) no-repeat 0 0;
@@ -441,15 +444,15 @@ html, body {
 }
 
 .string2 {
-    width: 50%;
+    width: 60%;
 }
 
 .string3 {
-    width: 70%;
+    width: 80%;
 }
 
 .string4 {
-    width: 90%;
+    width: 95%;
 }
 
 .string5 {
@@ -457,18 +460,425 @@ html, body {
 }
 
 .string6 {
-    width: 90%;
+    width: 95%;
 }
 
 .string7 {
-    width: 70%;
+    width: 80%;
 }
 
 .string8 {
-    width: 50%;
+    width: 60%;
 }
 
+/* action */
 
+.action {
+    width: 100%;
+    height: 100vh;
+    background: url(img/background.png) left -500px top 400px / 100% 100% no-repeat,
+                url(img/atom.png) left 50px center / 512px 512px no-repeat;
+}
+
+.action-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.action-description {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 75%;
+}
+
+.action-title {
+    position: relative;
+}
+
+.action-title::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 40px;
+    height: 20px;
+    background: url(img/half-item3.png) no-repeat 0 0;
+}
+
+.action-description-list {
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+    counter-reset: num;
+    font-size: 24px;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    color: var(--text);
+}
+
+.action-description-list li {
+    box-shadow: 0 12px 40px var(--string-shadow);
+    position: relative;
+    padding: 30px 0 30px 100px;
+    border-radius: 19px;
+    background-color: var(--white);
+    max-width: 880px;
+}
+
+.action-description-list li::before {
+    content: counter(num);
+    counter-increment: num;
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    left: 47px;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--button-header);
+    text-align: center;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    right: 35%;
+    height: 100%;
+    width: 15%;
+    background: linear-gradient( 90deg, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+
+.biglogo {
+    width: 37%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* method */
+
+.method {
+    width: 100%;
+    height: 100vh;
+    background: url(img/background.png) left -600px top -600px / 100% 100% no-repeat,
+                
+                url(img/decor-1.png) right 30px top 260px / 97px 49px no-repeat;
+}
+
+.method-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.method-title {
+    position: relative;
+}
+
+.method-title::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 40px;
+    height: 20px;
+    background: url(img/half-item4.png) no-repeat 0 0;
+}
+
+.method-description {
+    width: 100%;
+    height: 77%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.man {
+    width: 40%;
+    height: auto;
+    padding: 40px 0 40px 100px;
+    background: url(img/decor-4.png) left 38% center / 330px 330px no-repeat;
+}
+
+.man img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.method-list {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.method-list-item {
+    position: relative;
+    min-height: 80px;
+    background-color: var(--white);
+    box-shadow: 0 12px 40px var(--string-shadow);
+    border-radius: 19px;
+    padding: 17px 17px 17px 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.method-list-item h3 {
+    font-family: 'Gilroy';
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.method-list-item p {
+    font-family: 'Gilroy';
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.icon1::before {
+    content: '';
+    position: absolute;
+    left: 36px;
+    width: 37px;
+    height: 45px;
+    background: url(img/microscope.png) no-repeat;
+}
+
+.icon2::before {
+    content: '';
+    position: absolute;
+    left: 33px;
+    width: 45px;
+    height: 45px;
+    background: url(img/dna.png) no-repeat;
+}
+
+.icon3::before {
+    content: '';
+    position: absolute;
+    left: 33px;
+    width: 45px;
+    height: 45px;
+    background: url(img/XMLID_1505_.png) no-repeat;
+}
+
+.icon4::before {
+    content: '';
+    position: absolute;
+    left: 37px;
+    width: 35px;
+    height: 45px;
+    background: url(img/medical-report.png) no-repeat;
+}
+
+.icon5::before {
+    content: '';
+    position: absolute;
+    left: 44px;
+    width: 24px;
+    height: 45px;
+    background: url(img/test-tube.png) no-repeat;
+}
+
+.icon6::before {
+    content: '';
+    position: absolute;
+    left: 33px;
+    width: 45px;
+    height: 45px;
+    background: url(img/XMLID_586_.png) no-repeat;
+}
+
+.icon7::before {
+    content: '';
+    position: absolute;
+    left: 37px;
+    width: 39px;
+    height: 45px;
+    background: url(img/think.png) no-repeat;
+}
+
+/* chart */
+
+.chart {
+    width: 100%;
+    height: 100vh;
+}
+
+.chart-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.chart-title {
+    margin-top: 90px;
+    font-size: 42px;
+    position: relative;
+}
+
+.chart-title::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -80px;
+    width: 20px;
+    height: 40px;
+    background: url(img/half-item2.png) no-repeat 0 0;
+}
+
+.chart-subtitle {
+    margin: 40px 0;
+}
+
+.chart-subtitle span,
+.chart-container p,
+.horizontal-scale-title {
+    font-family: 'Gilroy';
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    position: relative;
+}
+
+.chart-subtitle span {
+    padding-left: 60px;
+}
+
+.chart-subtitle span::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 6px;
+    left: 34px;
+    border-radius: 50%;
+    background-color: #8385E2;
+}
+
+.chart-subtitle span:last-child::before {
+    background-color: #77B760;
+}
+
+.chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    max-height: 620px;
+}
+
+.vertical-scale {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.horizontal-scale {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.vertical-scale span,
+.horizontal-scale span {
+    padding: 0;
+    font-family: 'Gilroy';
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.vertical-scale-block {
+    width: 30px;
+    height: 190px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.vertical-scale-title {
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    height: 30px;
+    width: 30px;
+}
+
+.horizontal-scale-title {
+    margin: 60px 0 30px 110px;
+}
+
+.chart-shell {
+    width: 100%;
+    height: 100%;
+    max-width: 1213px;
+    max-height: 620px;
+    position: relative;
+}
+
+.chart-image {
+    width: 100%;
+    height: 100%;
+    background: url(img/chart.png) center center / 100% 100% no-repeat;
+}
+
+.words1,
+.words2 {
+    position: absolute;
+    width: 215px;
+    height: 73px;
+    font-size: 20px;
+    background-color: var(--white);
+    box-shadow: 0 12px 40px var(--string-shadow); 
+    border-radius: 36px 36px 36px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.words1::before,
+.words2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 73px;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: 10px solid transparent;
+    border-left: 10px solid var(--white);
+    border-top: 10px solid var(--white);
+}
+
+.words1 {
+    top: 43%;
+    left: 53%;
+}
+
+.words2 {
+    top: 63%;
+    left: 77%;
+}
+
+.words1 span,
+.words2 span {
+    color: var(--button-header-active);
+}
 
 @media (max-width: 767px) {
 
