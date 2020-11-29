@@ -175,6 +175,7 @@ html, body {
     method
     chart
     invest
+    comand
 */
 
 /* general */
@@ -930,6 +931,77 @@ html, body {
     width: 23px;
     height: 36px;
     background: url(img/half-item5.png) no-repeat 0 0;
+}
+
+/* comand */
+
+.comand {
+    width: 100%;
+    min-height: 100vh;
+    background: url(img/line.png) center top 400px / 660px 3px no-repeat,
+                url(img/molecule.png) left 30px top 260px / 620px 620px no-repeat,
+                url(img/decor-1.png) right -30px top 260px / 97px 49px no-repeat;
+}
+
+.comand-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.comand-title {
+    margin: 100px 0 50px 0;
+    position: relative;
+}
+
+.comand-title::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    width: 40px;
+    height: 20px;
+    background: url(img/half-item4.png) no-repeat 0 0;
+}
+
+.comand-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.comand-container-item {
+    width: 280px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.comand-container-item img {
+    object-fit: contain;
+    width: 290px;
+}
+
+.comand-item-title {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.comand-subtitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.comand-logo {
+    width: 154px;
+    height: 24px;
+    background: url(img/micro-logo.png) left 0 bottom 0 no-repeat;
+    flex-grow: 1;
 }
 
 @media (max-width: 767px) {
