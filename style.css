@@ -1100,6 +1100,7 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     border: 2px solid var(--button-header);
+    border-radius: 5px;
 }
 
 .form-title {
@@ -1122,10 +1123,40 @@ html, body {
     font-size: 20px;
 }
 
+.input-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
 .form-input {
-    max-width: 285px;
+    position: relative;
+    width: 48%;
     height: 62px;
+    padding: 19px 0 19px 27px;
+    border-radius: 5px;
     border: 1px solid var(--input-border);
+}
+
+.form-input input {
+    font-family: 'Gilroy';
+    font-size: 20px;
+    /* height: 100%; */
+    align-items: center;
+}
+
+.form-input label {
+    position: absolute;
+    top: -17px;
+    left: 22px;
+    font-family: 'Gilroy';
+    font-size: 18px;
+    background-color: var(--white);
+    border: 5px solid white;
+}
+
+.form-application span {
+    font-size: 20px;
+    color: var(--button-header-active);
 }
 
 .form-button {

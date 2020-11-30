@@ -295,21 +295,34 @@
                             <span class="subtitle contact-adress">Москва, Ленина 15/1</span>
                         </div>
                         <!-- <div class="contact-application"> -->
-                            <form class="form-application">
+                            <form class="form-application" action="mailto:5180578@gmail.com" enctype="text/plain">
                                 <h2 class="title form-title">Оставьте заявку</h2>
                                 <p class="subtitle form-subtitle">Вы получите детальное описание обучения и консультацию специалиста, 
                                     чтобы не оставалось вопросов</p>
-                                <input class="form-input" type="text" id="name">
-                                <label for="name">Имя</label>
-                                <input class="form-input" type="text" id="family">
-                                <label for="family">Фамилия</label>
-                                <input class="form-input" type="tel" id="tel">
-                                <label for="tel">Телефон</label>
-                                <input class="form-input form-input-email" type="email" id="email">
-                                <label for="email">E-mail</label>
-                                <input class="form-input-checkbox" type="checkbox" id="checkbox">
-                                <label for="checkbox">Согласен, обработайте меня</label>
-                                <button class="button form-button" type="submit">Оставить заявку</button>
+                                <div class="input-wrap">
+                                    <div class="form-input">
+                                        <label for="name">Имя<span> *</span></label>
+                                        <input type="text" id="name" placeholder="Иван">
+                                    </div>
+                                    <div class="form-input">
+                                        <label for="family">Фамилия</label>
+                                        <input type="text" id="family" placeholder="Иванов">
+                                    </div>
+                                </div>
+                                <div  class="form-input">
+                                    <label for="tel">Телефон</label>
+                                    <input type="tel" id="tel" placeholder="8 (800) 000-00-00">
+                                </div>
+                                <div class="form-input form-input-email">
+                                    <label for="email">E-mail<span> *</span></label>
+                                    <input type="email" id="email" placeholder="email@email.com">
+                                </div>
+                                <div class="form-input-checkbox">
+                                    <input type="checkbox" id="checkbox">
+                                    <label for="checkbox">Согласен, заберите мои деньги</label>
+                                </div>
+                                <button class="button form-button" type="submit" id="button">Оставить заявку</button>
+                                
                             </form>
                         <!-- </div> -->
                     </div>
