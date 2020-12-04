@@ -288,6 +288,7 @@ html, body {
     min-width: 25px;
     height: 16px;
     background-image: url(img/world-rus.png);
+    background-repeat: no-repeat;
     margin: 0 10px;
 }
 
@@ -1237,7 +1238,7 @@ html, body {
     }
     .block-nav li {
         font-size: 20px;
-        padding: 12px 15px;
+        padding: 20px 30px;
     }
     .burger_wrapper {
         display: block;
@@ -1296,6 +1297,15 @@ html, body {
     .button_burger.active span {
         transform: scale(0);
     }
+    .button-consult {
+        display: none;
+    }
+    .button-locale {
+        margin: 20px 30px;
+    }
+
+    /* investment */
+
     .investment {
         background: none;
         height: auto;
