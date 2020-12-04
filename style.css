@@ -243,9 +243,10 @@ html, body {
 .header {
     width: 100%;
     height: 70px;
-    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,1));
+    background: var(--white);
     position: fixed;
     top: 0;
+    box-shadow: 0 3px 9px var(--string-shadow);
     z-index: 100;
 }
 
@@ -256,7 +257,6 @@ html, body {
     width: 100%;
     max-width: 730px;
     padding-left: 20px;
-    background: none;
 }
 
 .nav {
@@ -264,7 +264,6 @@ html, body {
     justify-content: space-between;
     width: 100%;
     max-width: 505px;
-    background: none;
 }
 
 .nav-item a {
@@ -313,6 +312,11 @@ html, body {
     box-shadow: 0 3px 9px var(--button-header-hover-shadow);
 }
 
+.burger_wrapper,
+.button_burger {
+    display: none;
+}
+
 /* investment */
 
 .investment {
@@ -325,14 +329,26 @@ html, body {
                 url(img/decor-3.png) right -30px bottom 60px / 190px 190px no-repeat;
 }
 
+.investment-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .investment-subtitle {
     margin-top: 23px;
     margin-bottom: 50px;
 }
 
-.investment-button {
+.investment-button1 {
     width: 476px;
     height: 62px;
+}
+
+.investment-button2 {
+    display: none;
 }
 
 .description {
@@ -361,7 +377,7 @@ html, body {
 .picture {
     width: 40%;
     height: 90%;
-    min-width: 460px;
+    /* min-width: 460px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -370,6 +386,7 @@ html, body {
 
 .picture img {
     width: 100%;
+    height: auto;
     object-fit: contain;
 
 }
@@ -389,6 +406,11 @@ html, body {
     align-items: center;
     margin-right: 50px;
 
+}
+
+.signature img {
+    width: 40px;
+    height: 40px;
 }
 
 .signature p {
@@ -1140,7 +1162,6 @@ html, body {
 .form-input input {
     font-family: 'Gilroy';
     font-size: 20px;
-    /* height: 100%; */
     align-items: center;
 }
 
@@ -1173,6 +1194,162 @@ html, body {
     margin: 0;
 }
 
-@media (max-width: 767px) {
-
+@media (max-width: 768px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .wrap {
+        padding: 0 40px;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        height: 60px;
+        z-index: 100;
+    }
+    .header-logo {
+        width: 153px;
+        height: 25px;
+    }
+    .block-nav {
+        display: block;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: var(--white);
+        z-index: 20;
+        transition: all 0.3s ease 0s;
+    }
+    .block-nav.active {
+        top: 0;
+    }
+    .block-nav ul {
+        border: none;
+        display: block;
+        margin-top: 135px;
+    }
+    .block-nav li {
+        font-size: 20px;
+        padding: 12px 15px;
+    }
+    .burger_wrapper {
+        display: block;
+        position: absolute;
+        width: 22px;
+        height: 19px;
+        top: 20px;
+        right: 20px;
+    }
+    .button_burger {
+        display: block;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 22px;
+        height: 19px;
+        margin-right: 20px;
+        z-index: 50;
+    }
+    .button_burger:before,
+    .button_burger:after {
+        content: '';
+        background-color: var(--button-header-active);
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 1px;
+        left: 0;
+        transition: all 0.2s ease 0s;
+    }
+    .button_burger:before {
+        top: 0;
+    }
+    .button_burger:after {
+        bottom: 0;
+    }
+    .button_burger span {
+        position: absolute;
+        background-color: var(--button-header-active);
+        width: 100%;
+        height: 3px;
+        border-radius: 1px;
+        top: 8px;
+        left: 0;
+        transition: all 0.2s ease 0s;
+    }
+    .button_burger.active:before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    .button_burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 8px;
+    }
+    .button_burger.active span {
+        transform: scale(0);
+    }
+    .investment {
+        background: none;
+        height: auto;
+    }
+    .investment-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .description {
+        width: 100%;
+    }
+    .title {
+        font-size: 20px;
+        width: 100%;
+    }
+    .description-title {
+        margin-top: 60px;
+    }
+    .description-title::before {
+        top: -40px;
+        left: 0;
+        width: 15px;
+        height: 29px;
+        background-size: 15px 29px;
+    }
+    .investment-subtitle {
+        font-size: 16px;
+    }
+    .investment-button1 {
+        display: none;
+    }
+    .investment-button2 {
+        display: block;
+        width: 100%;
+        height: 42px;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+    .picture {
+        width: 100%;
+        height: auto;
+        
+    }
+    .picture img {
+        margin-left: 40px;
+    }
+    .signature-wrap {
+        width: 60%;
+    }
+    .signature {
+        margin-right: 0;
+    }
+    .signature img {
+        width: 28px;
+        height: 28px;
+        margin-left: 0;
+    }
+    .signature p {
+        font-size: 13px;
+    }
 }
