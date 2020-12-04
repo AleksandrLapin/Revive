@@ -460,6 +460,10 @@ html, body {
     background: url(img/old-face.png) center center / 656px 563px no-repeat;
 }
 
+.problem-container2 {
+    display: none;
+}
+
 .string span {
     box-shadow: 0 12px 40px var(--string-shadow);
     font-family: 'Gilroy';
@@ -1199,7 +1203,8 @@ html, body {
         overflow: hidden;
     }
     .wrap {
-        padding: 0 40px;
+        padding: 0 30px;
+        overflow: hidden;
     }
     .header {
         position: fixed;
@@ -1352,4 +1357,94 @@ html, body {
     .signature p {
         font-size: 13px;
     }
+
+    /* problem */
+
+    .problem {
+        height: auto;
+        background: none;
+    }
+    .problem-title {
+        margin: 90px 0 30px 0;
+    }
+    .problem-title::before {
+        top: -40px;
+        left: 0;
+        width: 15px;
+        height: 29px;
+        background-size: 15px 29px;
+    }
+    .problem-container {
+        display: none;
+    }
+    .problem-container2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        min-height: 600px;
+        background: url(img/old-face.png) top center / 100% auto no-repeat;
+        overflow: visible;
+    }
+    .string span {
+        display: block;
+        flex-grow: 1;
+        align-self: stretch;
+        font-size: 14px;
+        padding: 6px 12px;
+        box-shadow: 0 4px 6px var(--string-shadow);
+        min-width: auto;
+    }
+    .string1, .string2, .string3,
+    .string4, .string5, .string6,
+    .string7, .string8, .string9,
+    .string10, .string11 {
+        width: 100%;
+        margin: 2px 4px;
+        justify-content: center;
+    }
+
+    /* action */
+
+    .action {
+        height: auto;
+        background: none;
+        background: url(img/atom.png) left -170px center / 350px 350px no-repeat;
+    }
+    .action-title {
+        margin: 90px 0 30px 0;
+    }
+    .action-title::before {
+        top: -30px;
+        left: 0px;
+        width: 29px;
+        height: 15px;
+        background-size: 29px 15px;
+    }
+    .action-description {
+        width: 120%;
+    }
+    .action-description-list {
+        width: 140%;
+        font-size: 14px;
+    }
+    .action-description-list li {
+        padding: 15px 30px 15px 50px;
+        margin-bottom: 10px;
+        min-height: 58px;
+    }
+    .action-description-list li::before {
+        font-size: 25px;
+        top: 16px;
+        left: 20px;
+    }
+    .shadow {
+        right: 0;
+    }
+    .biglogo {
+        display: none;
+    }
+    
 }
