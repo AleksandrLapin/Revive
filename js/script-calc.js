@@ -72,6 +72,7 @@ class Slider {
         this.active = null;
         this.linkedField = document.querySelector(`.${args.linkedField}`);
         this.index = null;
+        this.status = false;
         this.perks = {
             payout: document.querySelector(`.${args.perks.payout}`),
             lifeQuality: document.querySelector(`.${args.perks.lifeQuality}`),
@@ -168,7 +169,18 @@ class Slider {
 
         this.anchor.style.left = `calc(${_fromLeft}% - ${_percent}em)`;
         if (this.linkedField) {
-            if (!this.create) this.linkedField.value = this.el.value;
+            if (!this.create) {
+                this.linkedField.addEventListener("focus", () => {
+                    this.status = true;
+                })
+                this.linkedField.addEventListener("focusout", () => {
+                    this.status = false;
+                    this.UpdateRange();
+                })
+                if (!this.status) {
+                    this.linkedField.value = this.el.value;
+                }
+            }
         } else {
             this.UpdateRange()
         }
@@ -176,7 +188,7 @@ class Slider {
     
     UpdateRange() {
         if (!this.create) {
-            this.el.value = this.linkedField.value;
+            if (this.status) this.el.value = this.linkedField.value;
         } else {
             let _selected = parseInt(this.linkedField.value);
             switch (_selected) {
@@ -220,18 +232,11 @@ let InitCalc = () => {
         _value = _value.getAttribute("value");
         _priceSelect.value = _value;
     });
-    
-    _priceSelect.addEventListener("change", () => {
-        let _value = parseInt(_priceSelect.value);
-        switch (_value) {
-            case 5000: console.log(true); break;
-        }
-    });
 
     [_ageField, _ageRange, _lvl, _priceSelect, _priceRange].forEach(item => {
         item.addEventListener("change", () => {
             Calculate(
-                "field.age.range-first",
+                "range-input.range-first",
                 "range-select.lvl.range-first",
                 "range-select.money.range-second"
             );
