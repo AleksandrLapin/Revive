@@ -174,9 +174,9 @@ h6 {
     --neutral-color: #dd7e7e;
     --root-width: 1360px;
     --root-padding: 20px 50px;
-    --root-border: 3px solid var(--secondary-color);
+    --root-border: 2px solid var(--button-header);
     --root-smooth: 10px;
-    --line-interval: 24px;
+    --line-interval: 18px;
 }
 
 html, body {
@@ -937,7 +937,7 @@ html, body {
 
 .invest {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .invest-wrap {
@@ -981,6 +981,8 @@ html, body {
     height: 36px;
     background: url(img/half-item5.png) no-repeat 0 0;
 }
+
+/* calc */
 
 .heading {
     /* margin: 0; */
@@ -1028,8 +1030,8 @@ html, body {
     flex-direction: column;
     height: auto;
     width: 100%;
-    padding: 50px 70px;
-    border: 2px solid var(--button-header-active);
+    padding: 30px 70px;
+    border: 2px solid var(--button-header);
     border-radius: 15px;
 }
 
@@ -1051,6 +1053,10 @@ html, body {
             margin-right: 20px;
             background-color: #ff8d8d;
         }
+
+        .calc__circs {
+            margin-bottom: 20px;
+        }
         
 .input {
     display: flex;
@@ -1066,6 +1072,8 @@ html, body {
     .input__name {
         font-family: 'Gilroy';
         font-size: 18px;
+        font-weight: 600;
+        color: var(--text);
         height: fit-content;
         margin: 0 10px;
         padding: 0 10px;
@@ -1079,7 +1087,9 @@ html, body {
         height: 54px;
         position: absolute;
         top: 9px;
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text);
         border: 1px solid lightgray;
         border-radius: 5px;
         box-sizing: border-box;
@@ -1099,9 +1109,18 @@ html, body {
         background-position: 95%;
         padding-right: 15%;
     }
+
+    .select-description {
+        font-family: 'Gilroy';
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--text);
+    }
+
 .range {
     width: 500px;
     position: relative;
+    margin-top: 10px;
 }
 
     .range-input {
@@ -1160,6 +1179,9 @@ html, body {
     .range-labels span {
         width: 3%;
         text-align: center;
+        font-size: 16px;
+        color: var(--text);
+        font-weight: 500;
     }
     
     .range-labels span:first-child {
@@ -1189,10 +1211,10 @@ html, body {
     justify-content: center;
     min-width: fit-content;
     width: 100%;
-    min-height: 64px;
-    padding: 25px;
+    min-height: 95px;
+    padding: 15px;
     border: var(--root-border);
-    border-radius: 7.5px;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 
@@ -1200,9 +1222,48 @@ html, body {
         height: 100%;
     }
 
+    .result-card__name {
+        font-size: 26px;
+        color: var(--text);
+        font-weight: 600;
+    }
+
+    .result-card__result {
+        font-size: 32px;
+        color: var(--text);
+        font-weight: 700;
+        color: var(--button-header-active);
+        margin-left: 25px;
+    }
+
+    .result-card__icon {
+        margin-right: 25px;
+    }
+
+    .result-card__icon1 {
+        background-image: url(img/health.png);
+        background-repeat: no-repeat;
+        width: 58px;
+        height: 58px;
+    }
+
+    .result-card__icon2 {
+        background-image: url(img/healthy-life.png);
+        background-repeat: no-repeat;
+        width: 56px;
+        height: 49px;
+    }
+
+    .result-card__icon3 {
+        background-image: url(img/stopwatch.png);
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 62px;
+    }
+
 /* Project */
 .calc__age {
-    margin-bottom: var(--line-interval);;    
+    margin-bottom: 40px;    
 }
 
     .calc__age .input {
@@ -1228,6 +1289,12 @@ html, body {
 
 .col.calc__price .range {
     width: 100%;
+}
+
+.hr {
+    height: 2px;
+    background-color: var(--button-header);
+    margin: 80px 0 40px 0;
 }
 
 /* comand */
@@ -1843,6 +1910,83 @@ html, body {
     .chart {
         display: none;
     }
+
+    /* invest */
+
+    .calc {
+        padding: 20px;
+    }
+    .invest-title::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 0;
+        width: 15px;
+        height: 29px;
+        background: url(img/half-item2.png) no-repeat 0 0;
+        background-size: 15px 29px;
+    }
+    .calc__heading {
+        font-size: 20px;
+    }
+    .input__name {
+        font-size: 13px;
+    }
+    .field,.select {
+        font-size: 14px;
+    }
+    .col {
+        min-width: 250px;
+        width: 100%;
+    }
+    .col-4 {
+        width: 100%;
+    }
+    .col-8 {
+        display: none;
+    }
+    .calc__age .input {
+        margin-right: 0;
+        width: 100%;
+    }
+    .hr {
+        margin: 30px 0;
+    }
+    .result-card__name {
+        font-size: 19px;
+    }
+    .result-card {
+        min-height: 70px;
+    }
+    .result-card__icon {
+        margin-right: 15px;
+    }
+    .result-card__icon1 {
+        width: 39px;
+        height: 39px;
+        background-size: 39px 39px;
+    }
+    .result-card__icon2 {
+        height: 35px;
+        width: 40px;
+        background-size: 40px 35px;
+    }
+    .result-card__icon3 {
+        width: 39px;
+        height: 44px;
+        background-size: 39px 44px;
+    }
+    .result-card__result {
+        font-size: 20px;
+    }
+    .col:not(:first-child) {
+        padding-left: 0;
+        margin-top: 18px;
+    }
+    .col:not(:last-child) {
+        padding-right: 0;
+    }
+
 
     /* contact */
 
