@@ -1957,6 +1957,7 @@ html, body {
     }
     .result-card {
         min-height: 70px;
+        justify-content: space-between;
     }
     .result-card__icon {
         margin-right: 15px;
@@ -1968,7 +1969,7 @@ html, body {
     }
     .result-card__icon2 {
         height: 35px;
-        width: 40px;
+        min-width: 40px;
         background-size: 40px 35px;
     }
     .result-card__icon3 {
@@ -1978,6 +1979,12 @@ html, body {
     }
     .result-card__result {
         font-size: 20px;
+        margin: 0;
+        flex-grow: 1;
+    }
+    .result-card_big {
+        flex-wrap: wrap;
+
     }
     .col:not(:first-child) {
         padding-left: 0;
